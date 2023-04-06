@@ -18,7 +18,7 @@
 
     <body>
         <div>
-            <textarea id="coord" name="coord" rows="3" cols="100" placeholder="{ x=???, y=???, z=??? }"></textarea>
+            <textarea id="coord" name="coord" rows="3" cols="100" placeholder="Point { x=??? } - (???), Line { x=???, y =??? } - (???,???) or Surface{ x=???, y=???, z=??? } - (???,???,???)"></textarea>
             <br>
 
             <input type="color" id="color-picker" name="color-picker" value="#ff0000">
@@ -26,6 +26,13 @@
             <input type="button" id="clear" value="ClearAll"/>
             <label for="mesh"> Visible</label>
             <input type="checkbox" id="mesh" name="mesh" value="mesh">
+            <div id="canvasId">
+                <!-- <h6>
+                    <p style="color: blue">X Axis</p>
+                    <p style="color: red">Y Axis</p>
+                    <p style="color: green">Z Axis</p>
+                </h6> -->   
+            </div >
             <script type="module" src="bundle.js"></script>
         </div>
     </body>
