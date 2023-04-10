@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Z-Draw3D-Surface</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/draw3dsurface/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/draw3dsurface/favicon-32x32.png">
@@ -13,26 +16,27 @@
                 overflow: hidden;
                 margin: 0px;
             }
+            .gray {
+                background-color: #888888;
+            }
         </style>
     </head>
 
     <body>
-        <div>
-            <textarea id="coord" name="coord" rows="3" cols="100" placeholder="Point { x=??? } - (???), Line { x=???, y =??? } - (???,???) or Surface{ x=???, y=???, z=??? } - (???,???,???)"></textarea>
-            <br>
-
-            <input type="color" id="color-picker" name="color-picker" value="#ff0000">
-            <input type="button" id="enter" value="Enter" />
-            <input type="button" id="clear" value="ClearAll"/>
-            <label for="mesh"> Visible</label>
-            <input type="checkbox" id="mesh" name="mesh" value="mesh">
-            <div id="canvasId">
-                <!-- <h6>
-                    <p style="color: blue">X Axis</p>
-                    <p style="color: red">Y Axis</p>
-                    <p style="color: green">Z Axis</p>
-                </h6> -->   
-            </div >
+        <div class="gray">
+            <button type="button" id="btn" class="btn btn-success" data-toggle="collapse" data-target="#demo">Open</button>
+            <div id="demo" class="collapse out">
+                <!-- <textarea id="coord" name="coord" rows="3" cols="100" placeholder="Point { x=??? } - (???), Line { x=???, y =??? } - (???,???) or Surface{ x=???, y=???, z=??? } - (???,???,???)"></textarea> -->
+                <div class="form-outline mb-4">
+                    <textarea class="form-control" id="coord" name="coord" rows="3" placeholder="Point { x=??? } - (???), Line { x=???, y =??? } - (???,???) or Surface{ x=???, y=???, z=??? } - (???,???,???)"></textarea>
+                </div>
+    
+                <input type="color" id="color-picker" name="color-picker" value="#ff0000">
+                <input type="button" id="enter" value="Enter" />
+                <input type="button" id="clear" value="ClearAll"/>
+                <label for="mesh"> Visible</label>
+                <input type="checkbox" id="mesh" name="mesh" value="mesh">
+            </div>
             <script type="module" src="bundle.js"></script>
         </div>
     </body>
