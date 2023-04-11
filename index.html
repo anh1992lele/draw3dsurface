@@ -24,8 +24,7 @@
 
     <body>
         <div class="gray">
-            <a href="/draw3dsurface/viewdata_Android201804.zip hidden" download>Link text</a>
-            <button type="button" id="btn" class="btn btn-success" data-toggle="collapse" data-target="#demo">Open</button>
+            <button type="button" id="btn" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Open</button>
             <div id="demo" class="collapse out">
                 <!-- <textarea id="coord" name="coord" rows="3" cols="100" placeholder="Point { x=??? } - (???), Line { x=???, y =??? } - (???,???) or Surface{ x=???, y=???, z=??? } - (???,???,???)"></textarea> -->
                 <div class="form-outline mb-4">
@@ -33,10 +32,12 @@
                 </div>
     
                 <input type="color" id="color-picker" name="color-picker" value="#ff0000">
-                <input type="button" id="enter" value="Enter" />
-                <input type="button" id="clear" value="ClearAll"/>
+                <input type="button" class="btn btn-success" id="enter" value="Enter" />
+                <input type="button" class="btn btn-success" id="clear" value="ClearAll"/>
+                
                 <label for="mesh"> Visible</label>
                 <input type="checkbox" id="mesh" name="mesh" value="mesh">
+
             </div>
             <script type="module" src="bundle.js"></script>
         </div>
