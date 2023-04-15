@@ -19,11 +19,17 @@
             .gray {
                 background-color: #888888;
             }
+            .measurementLabel {
+                font-family: monospace;
+                background-color: black;
+                color: white;
+            }
         </style>
+        <script type="module" src="bundle.js"></script>
     </head>
 
     <body>
-        <div class="gray">
+        <div class="gray" id="luan">
             <button type="button" id="btn" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Open</button>
             <div id="demo" class="collapse out">
                 <div class="form-outline mb-4">
@@ -36,9 +42,8 @@
                 
                 <label for="mesh"> Visible</label>
                 <input type="checkbox" id="mesh" name="mesh" value="mesh">
-
             </div>
-            <script type="module" src="bundle.js"></script>
+            <div id = instruction></div>
         </div>
     </body>
 </html>
